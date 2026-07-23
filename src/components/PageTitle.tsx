@@ -14,7 +14,7 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   return (
     <h2 class={classNames(displayClass, "page-title")}>
       <a href={baseDir}>
-         <img src={pathToRoot(fileData.slug!) + "static/icon.png"} alt="Icon" style={{ width: "1.5rem", verticalAlign: "middle", marginRight: "0.5rem" }} />
+         <img src={pathToRoot(fileData.slug!) + "/static/icon.png"} alt="Icon" style={{ width: "1.5rem", verticalAlign: "middle", marginRight: "0.5rem" }} />
         {title}
       </a>
     </h2>
