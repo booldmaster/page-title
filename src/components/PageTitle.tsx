@@ -6,7 +6,7 @@ import type {
 import { classNames } from "../util/lang";
 import { pathToRoot } from "../util/path";
 import { i18n } from "../i18n";
-import { joinSegments } from "../util/path"
+import { joinSegments } from "../util/path";
 
 const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
   const title = cfg?.pageTitle ?? i18n(locale).propertyDefaults.title;
