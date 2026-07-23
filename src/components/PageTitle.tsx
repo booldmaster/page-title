@@ -10,7 +10,7 @@ import { joinSegments } from "../util/path";
 
 const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
   const title = cfg?.pageTitle ?? i18n(locale).propertyDefaults.title;
-  const baseDir = pathToRoot(fileData.slug as string);
+  const baseDir = pathToRoot(fileData.slug!);
   const iconPath = joinSegments(baseDir, "/static/Logo.png");
   return (
     <h1 class={classNames(displayClass, "page-title")}>
@@ -23,9 +23,7 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
 
 PageTitle.css = `
 .page-title {
-  font-size: 1.75rem;
   margin: 0;
-  font-family: var(--titleFont);
 }
 `;
 
