@@ -26,6 +26,13 @@ PageTitle.css = `
 .page-title {
   margin: 0;
 }
+.Logo {
+  max-height: 195px;
+  min-height: 50px;
+  max-width: 212px;
+  min-width: 50px;
+  margin: 0;
+}
 `;
 
 export default (() => PageTitle) satisfies QuartzComponentConstructor;
