@@ -9,6 +9,7 @@ import { i18n } from "../i18n";
 import { joinSegments } from "../util/path";
 
 const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
+  const locale = cfg?.locale ?? "en-US";
   const title = cfg?.pageTitle ?? i18n(locale).propertyDefaults.title;
   const baseDir = pathToRoot(fileData.slug!);
   const iconPath = joinSegments(baseDir, "/static/Logo.png");
