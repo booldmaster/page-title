@@ -6,18 +6,18 @@ import type {
 import { classNames } from "../util/lang";
 import { pathToRoot } from "../util/path";
 import { i18n } from "../i18n";
+import { joinSegments } from "../util/path"
 
 const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
-  const locale = cfg?.locale ?? "en-US";
   const title = cfg?.pageTitle ?? i18n(locale).propertyDefaults.title;
   const baseDir = pathToRoot(fileData.slug as string);
+  const iconPath = joinSegments(baseDir, "/static/Logo.png");
   return (
-    <h2 class={classNames(displayClass, "page-title")}>
+    <h1 class={classNames(displayClass, "page-title")}>
       <a href={baseDir}>
-         <img src={pathToRoot(fileData.slug!) + "/static/icon.png"} alt="Icon" style={{ width: "1.5rem", verticalAlign: "middle", marginRight: "0.5rem" }} />
-        {title}
+        <img class="Logo" src={iconPath} alt={title}/>
       </a>
-    </h2>
+    </h1>
   );
 };
 
